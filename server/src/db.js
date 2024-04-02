@@ -8,7 +8,7 @@ const {
 } = process.env;
 
 const sequelize = new Sequelize(`postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}/countries`, {
-  logging: false, 
+  logging: console.log("Connected"), 
   native: false, 
 });
 const basename = path.basename(__filename);
@@ -28,9 +28,19 @@ let entries = Object.entries(sequelize.models);
 let capsEntries = entries.map((entry) => [entry[0][0].toUpperCase() + entry[0].slice(1), entry[1]]);
 sequelize.models = Object.fromEntries(capsEntries);
 
-const { Country } = sequelize.models;
+const { Activity, Country } = sequelize.models;
 
-// Aca vendrian las relaciones
+// Aca vendrian las 
+Country.belongsToMany(Activity, {
+  through: "country_activity",
+  foreignKey: "countryId",
+  timestamps: false,
+});
+Activity.belongsToMany(Country, {
+  through: "country_activity",
+  foreignKey: "activityId",
+  timestamps: false,
+});
 // Product.hasMany(Reviews);
 
 module.exports = {
