@@ -6,16 +6,16 @@ const Nav = () => {
     <div className="allNav">
       <div className="left">
         <Link to="/">
-          <p>Home</p>
+          <h2>Home</h2>
         </Link>
         <Link to="/create">
-          <p>Create activity</p>
+          <h2>Create activity</h2>
         </Link>
       </div>
 
       <div className="right">
         <Link to="/">
-          <p>Log out</p>
+          <h2>Log out</h2>
         </Link>
       </div>
     </div>

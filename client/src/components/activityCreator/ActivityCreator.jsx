@@ -1,8 +1,7 @@
 import { useEffect, useState } from "react";
 import { Validation } from "./Validation";
-import "./activity.css";
 import { useDispatch } from "react-redux";
-import { postActivity } from "../../redux/actions";
+import { postActivity } from "../../redux/actions"
 
 const ActivityCreator = () => {
   const dispatch = useDispatch();
@@ -123,6 +122,7 @@ const ActivityCreator = () => {
             <option value="Winter">Winter</option>
             <option value="Spring">Spring</option>
           </select>
+          
 
           <select
             name="difficulty"

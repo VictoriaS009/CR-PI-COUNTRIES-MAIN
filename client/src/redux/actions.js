@@ -92,7 +92,7 @@ export function getActivities() {
                 payload: data,
             });
         } catch (error) {
-            console.error("Error fetching countries:", error);
+            alert("Error fetching countries:");
             // Manejo de errores aquí, si es necesario
         }
     };

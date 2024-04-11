@@ -2,6 +2,7 @@ import { Routes, Route } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 //?----------------------------------------- components
 
+import LandingPage from "./components/LandingPage/LandingPage"; 
 import Home from "./components/home/Home";
 import Detail from "./components/detail/Detail";
 import Nav from "./components/navBar/Nav";
@@ -13,17 +14,15 @@ function App() {
   const location = useLocation();
 
   return (
-    <main className={`App ${location.pathname === "/" ? "landing" : "other"}`}>
+    <div className="App">
       <Nav></Nav>
       <Routes>
-        <Route className="other" path="/" element={<Home></Home>}></Route>
-        <Route path="/detail/:id" element={<Detail></Detail>}></Route>
-        <Route
-          path="/create"
-          element={<ActivityCreator></ActivityCreator>}
-        ></Route>
+        <Route path="/" element={<LandingPage/>}/>
+        <Route path="/countries" element={<Home />}/>
+        <Route path="/detail/:id" element={<Detail/>}/>
+        <Route path="/create" element={<ActivityCreator/>} />
       </Routes>
-    </main>
+    </div>
   );
 }
 

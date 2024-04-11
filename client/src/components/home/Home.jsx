@@ -1,9 +1,10 @@
-import Cards from "../cards/Cards";
+//import Nav from "../components/navBar/Nav";
+import Cards from "../Cards/Cards";
 import Pagination from "../pagination/Pagination";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect, useState } from "react";
 import { FiltersRedux } from "../filtersRedux/FiltersRedux";
-import { SearchBar } from "../searchBar/SearchBar";
+import { SearchBar } from "../SearchBar/SearchBar";
 import { setAllCountries } from "../../redux/actions";
 import "../filtersRedux/filters.css";
 
