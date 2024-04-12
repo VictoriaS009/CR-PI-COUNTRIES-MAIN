@@ -1,4 +1,4 @@
-//import Nav from "../components/navBar/Nav";
+import Nav from "../navBar/Nav";
 import Cards from "../Cards/Cards";
 import Pagination from "../pagination/Pagination";
 import { useDispatch, useSelector } from "react-redux";
@@ -41,6 +41,7 @@ const Home = () => {
 
   return (
     <section className="home container">
+      <Nav></Nav>
       <SearchBar setCurrentPage={setCurrentPage}></SearchBar>
       <FiltersRedux setCurrentPage={setCurrentPage}></FiltersRedux>
       <Cards countries={currentCountries}></Cards>

@@ -5,17 +5,17 @@ const Nav = () => {
   return (
     <div className="allNav">
       <div className="left">
-        <Link to="/">
-          <h2>Home</h2>
+        <Link to="/countries">
+          <p>Home</p>
         </Link>
         <Link to="/create">
-          <h2>Create activity</h2>
+          <p>Create activity</p>
         </Link>
       </div>
 
       <div className="right">
         <Link to="/">
-          <h2>Log out</h2>
+          <p>Log out</p>
         </Link>
       </div>
     </div>

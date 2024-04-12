@@ -5,7 +5,6 @@ import { useLocation } from "react-router-dom";
 import LandingPage from "./components/LandingPage/LandingPage"; 
 import Home from "./components/home/Home";
 import Detail from "./components/detail/Detail";
-import Nav from "./components/navBar/Nav";
 import ActivityCreator from "./components/activityCreator/ActivityCreator";
 //?----------------------------------------- style
 import "./App.css";
@@ -15,7 +14,6 @@ function App() {
 
   return (
     <div className="App">
-      <Nav></Nav>
       <Routes>
         <Route path="/" element={<LandingPage/>}/>
         <Route path="/countries" element={<Home />}/>

@@ -1,3 +1,4 @@
+import Nav from "../navBar/Nav";
 import { useEffect, useState } from "react";
 import { Validation } from "./Validation";
 import { useDispatch } from "react-redux";
@@ -92,6 +93,7 @@ const ActivityCreator = () => {
 
   return (
     <section className="act">
+      <Nav></Nav>
       <h1>Create your activity!</h1>
       <form onSubmit={onSubmit}>
         <label>Name:</label>
